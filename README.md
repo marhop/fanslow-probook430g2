@@ -30,21 +30,16 @@ autostarting and running the `fanslow` script as a background daemon.
 
 # Installation
 
-Just use the Makefile for installation:
+Just use the Makefile for installation and removal:
 
     # make install
+    # make uninstall
 
-Or manually put files here:
+If you really want to do stuff manually look at the Makefile to find out what
+needs to be done.
 
-    /usr/bin/fanslow
-    /usr/bin/probook_ec
-    /lib/systemd/system/fanslow.service
+You can watch the script working with the usual systemd tools:
 
-Enable and start service:
-
-    # systemctl enable fanslow
-    # systemctl start fanslow
-
-Watch the log:
-
+    # systemctl status fanslow
     # journalctl -u fanslow
+
