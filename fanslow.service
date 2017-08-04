@@ -2,8 +2,8 @@
 Description=Better fan control for HP ProBook 430 G2
 
 [Service]
-ExecStart=/usr/local/bin/fanslow
-ExecStopPost=/usr/local/bin/probook_ec FANRST
+ExecStart=/usr/bin/fanslow
+ExecStopPost=/usr/bin/probook_ec FANRST
 
 [Install]
 WantedBy=multi-user.target

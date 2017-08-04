@@ -20,7 +20,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 LOGFILE=/var/log/fanspeed.log
-ECFILE=/usr/local/bin/probook_ec
+ECFILE=/usr/bin/probook_ec
 COUNTER=0
 
 ######################################################
