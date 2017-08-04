@@ -30,11 +30,13 @@ autostarting and running the `fanslow` script as a background daemon.
 
 # Installation
 
-I will probably create a package for installation on Arch Linux very soon.
-Until then, and on other distributions, just use the Makefile for installation
-and removal. If you are picky about your installation paths (like `/usr/` vs.
-`/usr/local/`) you should probably adapt the Makefile as well as the `fanslow`
-and `fanslow.service` files prior to installation.
+On Arch Linux, you can install from the AUR:
+<https://aur.archlinux.org/packages/fanslow-probook430g2/>
+
+On other distributions, use the Makefile for installation and removal. If you
+are picky about your installation paths (like `/usr/` vs. `/usr/local/`) you
+should probably adapt the Makefile as well as the `fanslow` and
+`fanslow.service` files prior to installation.
 
     # make install
     # systemctl enable fanslow
