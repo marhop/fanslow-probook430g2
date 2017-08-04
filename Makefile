@@ -1,11 +1,11 @@
-fs = $(DESTDIR)/usr/local/bin/fanslow
-ec = $(DESTDIR)/usr/local/bin/probook_ec
-sc = $(DESTDIR)/etc/systemd/system/fanslow.service
+fs = $(DESTDIR)/usr/bin/fanslow
+ec = $(DESTDIR)/usr/bin/probook_ec
+sc = $(DESTDIR)/lib/systemd/system/fanslow.service
 
-# With proper packaging the following paths would be used instead.
-# fs = $(DESTDIR)/usr/bin/fanslow
-# ec = $(DESTDIR)/usr/bin/probook_ec
-# sc = $(DESTDIR)/lib/systemd/system/fanslow.service
+# Without proper packaging the following paths should be used instead!
+# fs = $(DESTDIR)/usr/local/bin/fanslow
+# ec = $(DESTDIR)/usr/local/bin/probook_ec
+# sc = $(DESTDIR)/etc/systemd/system/fanslow.service
 
 install: fanslow probook_ec fanslow.service
 	@install -Dm 755 fanslow $(fs)
