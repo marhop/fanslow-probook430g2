@@ -1,11 +1,11 @@
 Better fan control for HP ProBook 430 G2.
 
-On my HP ProBook 430 G2 laptop running Debian, the fan is much too zealous to
-my taste, running quite fast even when there's nearly no load on the system.
-These scripts take control of the fan and apply a more moderate policy. On my
-laptop this works better than the original fan control software, meaning that
-the fan runs much less, but your mileage may vary. And of course, it's
-nobody's fault if you wreck your hardware!
+On my HP ProBook 430 G2 laptop running Debian or Arch Linux, the fan is much
+too zealous to my taste, running quite fast even when there's nearly no load
+on the system. These scripts take control of the fan and apply a more moderate
+policy. On my laptop this works better than the original fan control software,
+meaning that the fan runs much less, but your mileage may vary. And of course,
+it's nobody's fault if you wreck your hardware!
 
 The core scripts `probook_ec` and `fanslow` are taken from
 <https://github.com/k3mpaxl/fanspeed> with no or only minimal modifications.
@@ -33,10 +33,12 @@ autostarting and running the `fanslow` script as a background daemon.
 Just use the Makefile for installation and removal:
 
     # make install
-    # make uninstall
+    # systemctl enable fanslow
+    # systemctl start fanslow
 
-If you really want to do stuff manually look at the Makefile to find out what
-needs to be done.
+    # systemctl stop fanslow
+    # systemctl disable fanslow
+    # make uninstall
 
 You can watch the script working with the usual systemd tools:
 

@@ -14,10 +14,6 @@ install: fanslow probook_ec fanslow.service
 	@sed -i -e '/^ECFILE=/cECFILE=$(ec)' $(fs)
 	@sed -i -e '/^ExecStart=/cExecStart=$(fs)' $(sc)
 	@sed -i -e '/^ExecStopPost=/cExecStopPost=$(ec) FANRST' $(sc)
-	@systemctl -q enable fanslow
-	@systemctl start fanslow
 
 uninstall:
-	@systemctl stop fanslow
-	@systemctl -q disable fanslow
 	@rm $(fs) $(ec) $(sc)
