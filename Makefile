@@ -1,6 +1,6 @@
 fs = $(DESTDIR)/usr/bin/fanslow
 ec = $(DESTDIR)/usr/bin/probook_ec
-sc = $(DESTDIR)/lib/systemd/system/fanslow.service
+sc = $(DESTDIR)/usr/lib/systemd/system/fanslow.service
 
 # Without proper packaging the following paths should be used instead! In this
 # case you also need to modify the `fanslow` and `fanslow.service` files which
