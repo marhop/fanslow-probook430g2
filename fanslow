@@ -48,7 +48,7 @@ getTempAvg()
     #TMP=$(sensors | grep Physical | cut -b 18-19)
     #TMP=$(cat /sys/class/hwmon/hwmon*/device/temp1_input | cut -b1-2)
     #TMP=$(sensors | grep "Physical" | awk '{print $4}' | tr -d '+°C' | cut -b 1-2)
-    TMP=$(cut -b1-2 /sys/class/hwmon/hwmon1/temp1_input)
+    TMP=$(sensors -u coretemp-isa-0000 | grep temp1_input | cut -c 16-17)
     ((CPUTEMP=$CPUTEMP+$TMP))
     ((CUR=$CUR+1))
     sleep 1
